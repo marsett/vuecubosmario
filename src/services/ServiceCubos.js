@@ -100,7 +100,6 @@ export default class ServiceCubos {
             let request = "api/Manage/Login";
             let url = Global.apiUrl + request;
             axios.post(url, login).then(response => {
-                this.setToken(response.data.token);
                 resolve(response);
             })
         })
